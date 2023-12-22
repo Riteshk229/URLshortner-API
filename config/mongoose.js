@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
-mongoose.connect("mongodb+srv://riteshk229:Wh!t3W0lf@cluster0.bfzffqa.mongodb.net/URLshortner?retryWrites=true&w=majority");
+mongoose.connect(process.env.MongoDB_URL);
 
 const db = mongoose.connection;
 
